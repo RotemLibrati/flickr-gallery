@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/flickr-gallery/static/css/main.1995fe68.css",
+    "main.js": "/flickr-gallery/static/js/main.520a7184.js",
+    "index.html": "/flickr-gallery/index.html",
+    "main.1995fe68.css.map": "/flickr-gallery/static/css/main.1995fe68.css.map",
+    "main.520a7184.js.map": "/flickr-gallery/static/js/main.520a7184.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1995fe68.css",
+    "static/js/main.520a7184.js"
+  ]
+}
