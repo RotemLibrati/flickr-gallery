@@ -9,7 +9,6 @@ import '../App.css';
 
 const Flickr = () => {
   const [images, setImages] = useState([]);
-  const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
   const APP_KEY = "aabca25d8cd75f676d3a74a72dcebf21";
 
@@ -17,13 +16,13 @@ const Flickr = () => {
   useEffect(() => {
     var config = {
       method: 'get',
-      url: `https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&page=${page}&extras=url_s&api_key=${APP_KEY}`,
+      url: `https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&extras=url_s&api_key=${APP_KEY}`,
     };
     const fetchImages = async () => {
       await axios(config)
         .then(function (response) {
           let xml = new XMLParser().parseFromString(response.data);
-          setImages(...images, [xml.children[0].children][0]);
+          setImages([xml.children[0].children][0]);
           setIsLoading(false);
         })
         .catch(function (error) {
