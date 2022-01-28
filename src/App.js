@@ -1,9 +1,10 @@
-
+import React from "react";
+import Flickr from "./components/Flickr";
 
 
 function App() {
   return (
-    <div>Rotem</div> 
+    <Flickr />
   );
 }
 
